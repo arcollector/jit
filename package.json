@@ -1,0 +1,26 @@
+{
+  "name": "jit",
+  "version": "1.0.0",
+  "description": "Git store todos los archivos que han sido toqueados como `blob(space)filelength(null byte)(zlip file compressed)`",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha --recursive",
+    "test-single": "mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^6.2.0"
+  },
+  "dependencies": {
+    "micro-strptime": "^0.2.3",
+    "minimist": "^1.2.0",
+    "moment": "^2.24.0",
+    "sinon": "^8.0.0"
+  }
+}

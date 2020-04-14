@@ -1,0 +1,25 @@
+#!/usr/bin/node
+
+const fs = require('fs');
+
+const Command = require('../lib/command');
+
+/*
+ie: [ '/usr/bin/node', '/home/pi/jit.js', 'init' ]
+*/
+
+const command = Command.execute(
+  process.cwd(),
+  {
+    ...process.env,
+    GIT_AUTHOR_NAME: 'Martin Ruiz',
+    GIT_AUTHOR_EMAIL: 'arcollector@gmail.com'
+  },
+  // remove /usr/bin/node element
+  process.argv.slice(1, process.argv.length),
+  () => fs.readFileSync(0),
+  process.stdout,
+  process.stderr
+);
+process.exit(command.status);
+
