@@ -20,7 +20,7 @@
   "dependencies": {
     "micro-strptime": "^0.2.3",
     "minimist": "^1.2.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "sinon": "^8.0.0"
   }
 }
